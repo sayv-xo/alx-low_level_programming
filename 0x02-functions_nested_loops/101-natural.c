@@ -3,7 +3,7 @@
 /**
  * main - Prints sum of all multiples of 3 and 5 below 1024
  *
- * Return: The sum
+ * Return: 0
  */
 
 int main(void)
@@ -18,5 +18,6 @@ int main(void)
 			counter += n;
 		}
 	}
-	return (counter);
+	printf("%d\n", counter);
+	return (0);
 }
