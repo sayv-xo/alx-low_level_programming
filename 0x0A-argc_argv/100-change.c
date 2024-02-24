@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 			coins += (amt / 2);
 			amt %= 2;
 		}
-		else
+		if (amt == 1)
 		{
 			amt %= 1;
 			coins++;
