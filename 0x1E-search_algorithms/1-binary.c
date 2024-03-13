@@ -12,6 +12,7 @@ void print_array(int *array, size_t start, size_t stop);
  * Return: the index where the value is located else
  *		   -1 if value is not present n array or array is NULL
  */
+
 int binary_search(int *array, size_t size, int value)
 {
 	size_t left, right, mid;
@@ -22,7 +23,7 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL || size == 0)
 		return (-1);
 
-	while (left != right)
+	while (left <= right)
 	{
 		print_array(array, left, right);
 
@@ -56,11 +57,11 @@ void print_array(int *array, size_t start, size_t stop)
 	size_t i = start;
 
 	printf("Searching in array: ");
-	for (; i <= stop; i++)
+
+	for (; i < stop; i++)
 	{
-		printf("%d", array[i]);
-		if (i != stop)
-			printf(", ");
+		printf("%d, ", array[i]);
 	}
-	printf("\n");
+
+	printf("%d\n", array[i]);
 }
